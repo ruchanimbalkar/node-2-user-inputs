@@ -1,4 +1,3 @@
-
 # 🐶 Dog Age Calculator
 
 ## 🌟 Goal
@@ -13,16 +12,15 @@ Your program will:
 
 ## Learning Goals
 
-You will practice using `process.argv` to get user input from the command line. This built-in Node feature lets you grab values typed into the terminal. 
+You will practice using `process.argv` to get user input from the command line. This built-in Node feature lets you grab values typed into the terminal.
 
-Here's a short article that explains it: 
+Here's a short article that explains it:
 
 - [NodeJS process.argv property explained](https://sebhastian.com/nodejs-process-argv/)
 
-
 ## How to Calculate Dog Years
 
-Dogs age faster than humans! 
+Dogs age faster than humans!
 
 Here's how we'll calculate a dog's age in dog years:
 
@@ -36,15 +34,15 @@ Examples:
 - 2 human years -> 24 dog years
 - 10 human years -> 64 dog years
 
-Your app will accept a dog's name and age in human years, and return a sentence about their age in dog years. 
+Your app will accept a dog's name and age in human years, and return a sentence about their age in dog years.
 
 ## Assumptions
 
-You can assume the user will enter whole numbers greater than 0 for the dog's age. 
+You can assume the user will enter whole numbers greater than 0 for the dog's age.
 
 ## Running Your App
 
-Before your run your app, use `cd` to navigate into the folder that contains `dogAgeCalculator.js`. 
+Before your run your app, use `cd` to navigate into the folder that contains `dogAgeCalculator.js`.
 
 Then, run your app like this:
 
@@ -61,19 +59,22 @@ Here’s what each part means:
 
 ## Text
 
-Run the following test cases to ensure your dog age calculator is running correctly. 
+Run the following test cases to ensure your dog age calculator is running correctly.
 
-1. Running `node dogAgeCalculator.js Maisie 3` should output: 
+1. Running `node dogAgeCalculator.js Maisie 3` should output:
+
 ```
 Your dog, Maisie, is 3 years old, but that's 29 years old in dog years!
 ```
 
 2. Running `node dogAgeCalculator.js Ralph 4` should output:
+
 ```
 Your dog, Ralph, is 4 years old, but that's 34 years old in dog years!
 ```
 
 3. Running `node dogAgeCalculator.js Coco 10` should output:
+
 ```
 Your dog, Coco, is 10 years old, but that's 64 years old in dog years!
 ```
@@ -84,19 +85,20 @@ If your numbers match, great job! You did it! 🎉
 
 After your main program works, add a few extra touches:
 
-*🧩 Error handling:*
+_🧩 Error handling:_
 
 - What if the user forgets to type an age?
+  => If user forgets to type age, there will be an output message saying "You forgot to enter dog's age"
 - What if someone types a word instead of a number?
-    You can print a friendly message like:
-    
-    ```
-    Please enter a number for the dog's age.
-    ```
+  You can print a friendly message like:
+  ```
+  Please enter a number for the dog's age.
+  ```
 
+_🔢 Decimals:_
 
-*🔢 Decimals:*
-
-- What if someone types 7.5 as the dog’s age? 
+- What if someone types 7.5 as the dog’s age?
 - Do you round up? Round down? Or show the exact decimal?
+  => Yes, it is round down to 7.
 - Decide how you want your program to handle it and explain your choice in a comment.
+  => I want my input to be a valid number > 0 so only values above 0 will be accepted.
