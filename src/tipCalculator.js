@@ -6,6 +6,8 @@
 // let bill = 100;
 // let tipPercentage = 0.2;
 // let numGuests = 4;
+
+//Dynamic user inputs
 //Reference : https://sebhastian.com/nodejs-process-argv/
 //---Method 1:
 // const { argv } = process;
