@@ -3,39 +3,45 @@
 // Run this file with the node command:
 // node tipCalculator.js
 
+//Hard coded values:
 // let bill = 100;
 // let tipPercentage = 0.2;
 // let numGuests = 4;
 
 //Dynamic user inputs
 //Reference : https://sebhastian.com/nodejs-process-argv/
-//---Method 1:
-// const { argv } = process;
-// const [node, script, billAmount, tipPercent, guests] = argv;
-// let bill = parseInt(billAmount);
-// let tipPercentage = parseFloat(tipPercent);
-// let numGuests = parseInt(guests);
 
-////---Method 2:
-// let bill = parseInt(process.argv[2]);
-// let tipPercentage = parseFloat(process.argv[3]);
-// let numGuests = parseInt(process.argv[4]);
+const tipCalculator = () => {
+  //---Method 1:
+  // const { argv } = process;
+  // const [node, script, billAmount, tipPercent, guests] = argv;
+  // let bill = parseInt(billAmount);
+  // let tipPercentage = parseFloat(tipPercent);
+  // let numGuests = parseInt(guests);
 
-////---Method 3:
-let bill = Number(process.argv[2]);
-let tipPercentage = Number(process.argv[3]);
-let numGuests = Number(process.argv[4]);
+  ////---Method 2:
+  // let bill = parseInt(process.argv[2]);
+  // let tipPercentage = parseFloat(process.argv[3]);
+  // let numGuests = parseInt(process.argv[4]);
 
-//we want to calculate 3 values : tip amount, total bill, and the total for each guest
+  ////---Method 3:
+  let bill = Number(process.argv[2]);
+  let tipPercentage = Number(process.argv[3]);
+  let numGuests = Number(process.argv[4]);
 
-//calculating the tip amount
-let tipAmount = bill * tipPercentage;
-console.log("tip amount : $", tipAmount);
+  //we want to calculate 3 values : tip amount, total bill, and the total for each guest
 
-//total bill
-let totalBill = bill + tipAmount;
-console.log("total bill : $", totalBill);
+  //calculating the tip amount
+  let tipAmount = bill * tipPercentage;
+  console.log("tip amount : $", tipAmount);
 
-//total for each guest
-let totalForEachGuest = totalBill / numGuests;
-console.log("total for each guest : $", totalForEachGuest);
+  //total bill
+  let totalBill = bill + tipAmount;
+  console.log("total bill : $", totalBill);
+
+  //total for each guest
+  let totalForEachGuest = totalBill / numGuests;
+  console.log("total for each guest : $", totalForEachGuest);
+};
+
+tipCalculator();
