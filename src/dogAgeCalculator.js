@@ -49,7 +49,7 @@ if (age === null || age === undefined) {
       outputMessage = `Your dog, ${dogName}, is ${dogAge} years old, but that's ${dogYears} years old in dog years!`;
     } catch (error) {
       //catch errormessage and assign to outputMessage
-      outputMessage += error;
+      outputMessage = "Error Message:" + error;
     }
   }
 }
